@@ -10,8 +10,8 @@ source:
   sha256: dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e
 
 build:
-  # Upstream source : https://github.com/conda-forge/crcmod-feedstock/blob/2ee508ae7fb2cf562db67a5c5511c6bf2304e0a8/recipe/recipe.yaml#L16
-  number: 1014
+  # https://anaconda.org/channels/conda-forge/packages/crcmod/files
+  number: 1015
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
 
 requirements:
