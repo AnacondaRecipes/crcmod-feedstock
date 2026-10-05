@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - python
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
   host:
     - pip
@@ -44,7 +44,7 @@ about:
      Python module for generating objects that compute the Cyclic Redundancy
      Check (CRC)
   doc_url: https://crcmod.sourceforge.net/
-  dev_url: https://salsa.debian.org/python-team/packages/python-crcmod
+  dev_url: https://sourceforge.net/projects/crcmod/
 
 extra:
   recipe-maintainers:
