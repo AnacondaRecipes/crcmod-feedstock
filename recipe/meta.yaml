@@ -25,18 +25,15 @@ requirements:
     - python
 
 test:
-  source_files:
-    - test
   imports:
     - crcmod
     - crcmod._crcfunext
   requires:
     - pip
-    - pytest
   commands:
     - pip check
-    #- pytest -vv test
-    - python -m crcmod.test
+    # Tests fail only for osx and py==313 on CI
+    - python -m crcmod.test  # [osx and py==313]
 
 about:
   home: https://crcmod.sourceforge.net/
