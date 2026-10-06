@@ -10,8 +10,7 @@ source:
   sha256: dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e
 
 build:
-  # https://anaconda.org/channels/conda-forge/packages/crcmod/files
-  number: 1015
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
 
 requirements:
@@ -26,13 +25,18 @@ requirements:
     - python
 
 test:
+  source_files:
+    - test
   imports:
     - crcmod
     - crcmod._crcfunext
   requires:
     - pip
+    - pytest
   commands:
     - pip check
+    #- pytest -vv test
+    - python -m crcmod.test
 
 about:
   home: https://crcmod.sourceforge.net/
