@@ -33,7 +33,7 @@ test:
   commands:
     - pip check
     # Tests fail only for osx and py==313 on CI
-    - python -m crcmod.test  # [osx and py==313]
+    - python -m crcmod.test  # [not (osx and py==313)]
 
 about:
   home: https://crcmod.sourceforge.net/
