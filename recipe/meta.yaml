@@ -27,7 +27,6 @@ requirements:
 test:
   imports:
     - crcmod
-    - crcmod._crcfunext
   requires:
     - pip
   commands:
